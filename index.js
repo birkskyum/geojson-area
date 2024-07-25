@@ -55,7 +55,7 @@ function polygonArea(coords) {
 function ringArea(coords) {
     var p1, p2, p3, lowerIndex, middleIndex, upperIndex, i,
     area = 0,
-    coordsLength = coords.length;
+    coordsLength = coords.length - 1;
 
     if (coordsLength > 2) {
         for (i = 0; i < coordsLength; i++) {
