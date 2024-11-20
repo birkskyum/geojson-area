@@ -1,5 +1,8 @@
 # geojson-area
 
+[![JSR](https://jsr.io/badges/@birkskyum/geojson-area)](https://jsr.io/@birkskyum/geojson-area)
+
+
 Calculate the area inside of any [GeoJSON](http://geojson.org/) geometry.
 
 
