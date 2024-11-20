@@ -1,4 +1,4 @@
-name: main
+name: test
 
 on:
   push:
@@ -22,7 +22,4 @@ jobs:
         run: deno i
       
       - name: Test
-        run: deno test
-
-      - name: Publish
-        run: deno publish
+        run: deno test -R
