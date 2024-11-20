@@ -6,6 +6,7 @@ interface GeoJSONGeometry {
     geometries?: GeoJSONGeometry[];
 }
 
+
 export function geometry(geom: GeoJSONGeometry): number {
     let area = 0;
     switch (geom.type) {
@@ -42,14 +43,22 @@ export function polygonArea(coords: number[][][]): number {
     return area;
 }
 
+
 /**
  * Calculate the approximate area of the polygon were it projected onto
- * the earth. Note that this area will be positive if ring is oriented
- * clockwise, otherwise it will be negative.
+ *     the earth.  Note that this area will be positive if ring is oriented
+ *     clockwise, otherwise it will be negative.
  *
- * @param coords - Array of coordinates
- * @returns The approximate signed geodesic area of the polygon in square meters.
+ * Reference:
+ * Robert. G. Chamberlain and William H. Duquette, "Some Algorithms for
+ *     Polygons on a Sphere", JPL Publication 07-03, Jet Propulsion
+ *     Laboratory, Pasadena, CA, June 2007 http://trs-new.jpl.nasa.gov/dspace/handle/2014/40409
+ *
+ * Returns:
+ * {float} The approximate signed geodesic area of the polygon in square
+ *     meters.
  */
+
 export function ringArea(coords: number[][]): number {
     let area = 0;
     const coordsLength = coords.length;
