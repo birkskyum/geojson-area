@@ -6,17 +6,27 @@
 Calculate the area inside of any [GeoJSON](http://geojson.org/) geometry.
 
 
-## example
+## instal
 
-```js
-import { geometry } from './index.ts';
+```sh
+npx jsr add @birkskyum/geojson-area
+```
 
-var area = geometry(obj);
+## import
+
+```ts
+import { geometry } from '@birkskyum/geojson-area';
+```
+
+## use
+
+```ts
+const area = geometry(obj);
 ```
 
 ## api
 
-### `geojsonArea.geometry(obj)`
+### `geometry(obj)`
 
 Given a Geometry object, return contained
 area as square meters. Invalid input will return `null`.
