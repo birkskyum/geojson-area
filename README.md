@@ -1,19 +1,14 @@
-[![Build Status](https://travis-ci.org/mapbox/geojson-area.png)](https://travis-ci.org/mapbox/geojson-area)
-
 # geojson-area
 
 Calculate the area inside of any [GeoJSON](http://geojson.org/) geometry.
 
-## usage
-
-    npm install @mapbox/geojson-area
 
 ## example
 
 ```js
-var geojsonArea = require('@mapbox/geojson-area');
+import { geometry } from './index.ts';
 
-var area = geojsonArea.geometry(obj);
+var area = geometry(obj);
 ```
 
 ## api
